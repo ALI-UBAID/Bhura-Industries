@@ -1,39 +1,29 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Send, CheckCircle } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import { companyInfo } from '@/lib/data';
-
-type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState<Status>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) return;
 
-    setStatus('submitting');
-    try {
-      const { error } = await supabase.from('contact_messages').insert({
-        name: name.trim(),
-        email: email.trim(),
-        message: message.trim(),
-      });
+    const whatsappMessage = [
+      'Hello, I would like to inquire about your baking trays and moulds.',
+      '',
+      `Name: ${name.trim()}`,
+      `Email: ${email.trim()}`,
+      `Message: ${message.trim()}`,
+    ].join('\n');
 
-      if (error) throw error;
-
-      setStatus('success');
-      setName('');
-      setEmail('');
-      setMessage('');
-      setTimeout(() => setStatus('idle'), 5000);
-    } catch {
-      setStatus('error');
-      setTimeout(() => setStatus('idle'), 5000);
-    }
+    window.open(
+      `https://wa.me/${companyInfo.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    );
   };
 
   return (
@@ -176,34 +166,14 @@ export default function Contact() {
 
               <button
                 type="submit"
-                disabled={status === 'submitting'}
-                className="group flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-8 py-4 text-base font-semibold text-ink-950 transition-all hover:bg-gold-400 disabled:cursor-not-allowed disabled:opacity-50"
+                className="group flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-8 py-4 text-base font-semibold text-ink-950 transition-all hover:bg-gold-400"
               >
-                {status === 'submitting' ? (
-                  'Sending...'
-                ) : (
-                  <>
-                    Send Message
-                    <Send
-                      size={18}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </>
-                )}
+                Send via WhatsApp
+                <Send
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1"
+                />
               </button>
-
-              {/* Status messages */}
-              {status === 'success' && (
-                <div className="mt-4 flex items-center gap-2 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">
-                  <CheckCircle size={18} />
-                  Thank you! Your message has been sent. We'll be in touch soon.
-                </div>
-              )}
-              {status === 'error' && (
-                <div className="mt-4 rounded-lg border border-accent-500/30 bg-accent-500/10 px-4 py-3 text-sm text-accent-500">
-                  Something went wrong. Please try again or call us directly.
-                </div>
-              )}
             </form>
           </div>
         </div>
