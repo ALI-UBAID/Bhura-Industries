@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-100 text-ink-800 font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .gold-divider {
+    @apply relative flex items-center justify-center py-2;
+  }
+  .gold-divider::before,
+  .gold-divider::after {
+    content: '';
+    @apply h-px flex-1;
+    background: linear-gradient(to right, transparent, #d99a1f, transparent);
+  }
+  .gold-divider::before {
+    @apply mr-4;
+  }
+  .gold-divider::after {
+    @apply ml-4;
+  }
+  .section-pad {
+    @apply px-6 py-20 md:px-12 lg:px-20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
