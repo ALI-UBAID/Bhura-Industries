@@ -39,7 +39,7 @@ export const products: Product[] = [
     image: muffinTrayLargeImage,
   },
   {
-    name: "Donut Baking Tray",
+    name: "Muffin Tray",
     label: "Consistent shape and golden finish every batch",
     image: donutTrayImage,
   },
@@ -64,12 +64,12 @@ export const products: Product[] = [
     image: breadMould4CavityImage,
   },
   {
-    name: "Bread Tin with Lid",
+    name: "400 gm bread moulds pocket",
     label: "Enclosed tin for square-top sandwich bread",
     image: breadTinLidImage,
   },
   {
-    name: "Toast / Baguette Tray",
+    name: "Baguette Tray",
     label: "Square-corner precision for commercial toast lines",
     image: baguetteTrayImage,
   },
