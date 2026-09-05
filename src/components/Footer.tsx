@@ -20,6 +20,9 @@ const productLinks = [
   'Burger tray',
   'Rusk moulds',
   'Bread moulds',
+  'Belan',
+  'Burger ring',
+  'Garlic bread moulds'
 ];
 
 export default function Footer() {
