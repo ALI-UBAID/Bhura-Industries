@@ -34,7 +34,7 @@ export const products: Product[] = [
     image: muffinTrayNonstickImage,
   },
   {
-    name: "Muffin / Bun Tray (Large)",
+    name: "Muffin Tray (Large)",
     label: "Multi-cavity large tray for high-volume bun batches",
     image: muffinTrayLargeImage,
   },
