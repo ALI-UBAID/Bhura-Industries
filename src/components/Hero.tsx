@@ -45,9 +45,9 @@ export default function Hero() {
             </span>
           </div>
           <h1 className="text-balance text-5xl font-bold leading-tight text-cream-50 md:text-6xl lg:text-7xl">
-            Premium Baking
+            Bhura Industries
             <br />
-            <span className="text-gold-400">Trays &amp; Moulds</span>
+            <span className="text-gold-400">Premium Baking Trays &amp; Moulds</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream-200/80">
             Crafting world-class bakery equipment since {companyInfo.since}.

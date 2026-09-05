@@ -1,15 +1,20 @@
-import breadMould400gImage from "@/images/400 gm breads pocket.jpg.jpeg";
-import baguetteTrayImage from "@/images/BTY544.png";
-import burgerRingImage from "@/images/burgerring.jpeg";
-import creamRollConesImage from "@/images/cream roll cones.JPG.jpeg";
-import rollingBelanImage from "@/images/DSC_6699 copy.jpg.jpeg";
-import perforatedTrayImage from "@/images/perforated tary.JPG.jpeg";
-import fourPocketRuskMouldImage from "@/images/product_image_1.png";
-import bunTrayImage from "@/images/product_image_2.png";
-import hotDogTrayImage from "@/images/product_image_3.png";
-import breadMouldImage from "@/images/product_image_4.jpeg";
-import flatBakingTrayImage from "@/images/product_image_5.jpeg";
-import donutTrayImage from "@/images/product_image_6.jpeg";
+import ruskTray4PocketImage from "@/images/processed/rusk_tray_4pocket.webp";
+import bunTrayImage from "@/images/processed/bun_tray.webp";
+import breadMouldImage from "@/images/processed/bread_mould.webp";
+import flatBakingTrayImage from "@/images/processed/flat_baking_tray.webp";
+import donutTrayImage from "@/images/processed/donut_tray.webp";
+import baguetteTrayImage from "@/images/processed/baguette_tray.webp";
+import burgerRingImage from "@/images/processed/burger_ring.webp";
+import creamRollConesImage from "@/images/processed/cream_roll_cones.webp";
+import perforatedTrayImage from "@/images/processed/perforated_tray.webp";
+import breadMould400gImage from "@/images/processed/bread_mould_400g.webp";
+import rollingBelanImage from "@/images/processed/rolling_belan.webp";
+import breadMould4CavityImage from "@/images/processed/bread_mould_4cavity.webp";
+import muffinTrayNonstickImage from "@/images/processed/muffin_tray_nonstick.webp";
+import donutTrayRawImage from "@/images/processed/donut_tray_raw.webp";
+import muffinTrayLargeImage from "@/images/processed/muffin_tray_large.webp";
+import breadTinLidImage from "@/images/processed/bread_tin_lid.webp";
+import toastMould4SlotImage from "@/images/processed/toast_mould_4slot.webp";
 
 export interface Product {
   name: string;
@@ -24,14 +29,14 @@ export const products: Product[] = [
     image: burgerRingImage,
   },
   {
-    name: "Muffin Cake Tray",
-    label: "Precision-formed cups for bakery-grade muffins",
-    image: bunTrayImage,
+    name: "Muffin / Cake Tray (Non-Stick)",
+    label: "Premium non-stick finish for bakery-grade muffins",
+    image: muffinTrayNonstickImage,
   },
   {
-    name: "Non-Stick Hot Dog Tray",
-    label: "Effortless release with premium non-stick coating",
-    image: hotDogTrayImage,
+    name: "Muffin / Bun Tray (Large)",
+    label: "Multi-cavity large tray for high-volume bun batches",
+    image: muffinTrayLargeImage,
   },
   {
     name: "Donut Baking Tray",
@@ -39,19 +44,44 @@ export const products: Product[] = [
     image: donutTrayImage,
   },
   {
+    name: "Donut / Cookie Tray (Raw Steel)",
+    label: "Heavy-duty raw steel for industrial donut production",
+    image: donutTrayRawImage,
+  },
+  {
     name: "Bread Moulds",
     label: "Heavy-duty moulds for structurally sound loaves",
     image: breadMouldImage,
   },
   {
-    name: "Toast Moulds",
+    name: "400gm Bread Moulds",
+    label: "Standard 400g capacity for commercial bakeries",
+    image: breadMould400gImage,
+  },
+  {
+    name: "Bread Mould (4-Cavity)",
+    label: "Four-loaf efficiency for high-volume bread lines",
+    image: breadMould4CavityImage,
+  },
+  {
+    name: "Bread Tin with Lid",
+    label: "Enclosed tin for square-top sandwich bread",
+    image: breadTinLidImage,
+  },
+  {
+    name: "Toast / Baguette Tray",
     label: "Square-corner precision for commercial toast lines",
     image: baguetteTrayImage,
   },
   {
+    name: "Toast Mould (4-Slot)",
+    label: "Four-slot stainless steel for premium toast production",
+    image: toastMould4SlotImage,
+  },
+  {
     name: "4 Pocket Rusk Moulds",
     label: "Four-cavity efficiency for high-volume rusk production",
-    image: fourPocketRuskMouldImage,
+    image: ruskTray4PocketImage,
   },
   {
     name: "Perforated Tray",
@@ -69,16 +99,6 @@ export const products: Product[] = [
     image: flatBakingTrayImage,
   },
   {
-    name: "Cookies Drop Tray",
-    label: "Uniform spacing for consistent cookie drops",
-    image: donutTrayImage,
-  },
-  {
-    name: "400gm Bread Moulds",
-    label: "Standard 400g capacity for commercial bakeries",
-    image: breadMould400gImage,
-  },
-  {
     name: "Cream Roll Cones",
     label: "Cone-shaped moulds for crisp cream roll shells",
     image: creamRollConesImage,
@@ -87,11 +107,6 @@ export const products: Product[] = [
     name: "Rolling Belan",
     label: "Stainless-steel rollers for professional dough prep",
     image: rollingBelanImage,
-  },
-  {
-    name: "Burger Ring",
-    label: "Ring moulds for perfectly round burger patties",
-    image: burgerRingImage,
   },
 ];
 
