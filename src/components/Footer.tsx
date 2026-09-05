@@ -11,12 +11,15 @@ const quickLinks = [
 ];
 
 const productLinks = [
-  'Burger Tray',
-  'Muffin Cake Tray',
-  'Bread Moulds',
-  'Donut Baking Tray',
-  'Cream Roll Cones',
-  'Perforated Tray',
+  'Bakery tray',
+  'Bun tray',
+  'Cookies tray',
+  'Muffin tray',
+  'Baguette tray',
+  'Cream roll cone',
+  'Burger tray',
+  'Rusk moulds',
+  'Bread moulds',
 ];
 
 export default function Footer() {
